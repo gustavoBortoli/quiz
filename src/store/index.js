@@ -14,7 +14,8 @@ export default new Vuex.Store({
                     "Opção 2",
                     "Opção 3",
                     "Opção 4",
-                ]
+                ],
+                selectedAnswer: 0
             },
             {
                 description: "LLUULULULULULULULULU",
@@ -23,7 +24,8 @@ export default new Vuex.Store({
                     "Opção 2",
                     "Opção 3",
                     "Opção 4",
-                ]
+                ],
+                selectedAnswer: 0
             },
             {
                 description: "LALALALALALALALALA",
@@ -32,7 +34,8 @@ export default new Vuex.Store({
                     "Opção 2",
                     "Opção 3",
                     "Opção 4",
-                ]
+                ],
+                selectedAnswer: 0
             }
         ]
     },

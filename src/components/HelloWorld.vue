@@ -1,9 +1,11 @@
 <template>
-  <Quiz :questionNumber="number" />
+  <!-- <Quiz :questionNumber="number" /> -->
+  <Login/>
 </template>
 
 <script>
 import Quiz from '@/components/Quiz/Quiz.vue'
+import Login from '@/components/Login.vue'
 export default {
   name: 'HelloWorld', 
   data(){
@@ -12,7 +14,7 @@ export default {
     }
   },  
   components: {
-    Quiz
+    Quiz, Login
   } 
 }
 </script>
