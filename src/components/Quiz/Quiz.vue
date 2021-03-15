@@ -1,5 +1,11 @@
 <template>
     <v-card class="mx-auto mt-5" max-width="500">
+        <v-list-item>
+            <v-list-item-content>
+                <v-list-item-title><b>{{user.matricula}}</b> | {{user.nome}}</v-list-item-title>
+            </v-list-item-content>
+        </v-list-item>
+        
         <v-window v-model="step">
                 <template v-for="(question, i) in questions">
                     <v-window-item :key="i" :value="i+1">
@@ -71,6 +77,9 @@ export default {
         color () {
             return 'orange'
         },
+        user() {
+            return this.$store.getters.quizUser
+        }
     },
     components: {
         Question
@@ -82,7 +91,7 @@ export default {
             else
                 this.step++
         }
-    }
+    },
 }
 </script>
 

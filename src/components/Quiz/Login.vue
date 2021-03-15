@@ -1,5 +1,5 @@
 <template>
-    <v-card class="mx-auto mt-5 px-5 py-3" max-width="500">
+    <v-card class="mx-auto px-5 py-3" max-width="500">
         <v-card-title class="padding">
             Informe a sua matrícula para iniciar o Quiz
         </v-card-title>
@@ -17,14 +17,22 @@
 
 <script>
 export default {
-    data() {
-        return {
-            matricula
+    computed: {
+        authenticated() {
+            return this.$store.state.userAuthenticated
+        },
+        matricula: {
+            get() {
+                return this.$store.state.matricula
+            },
+            set(value) {
+                this.$store.state.matricula = value
+            }
         }
     },
     methods: {
         login() {
-            if(this.matricula) alert(this.matricula)
+            this.$store.dispatch('authenticateUser', this.matricula)
         }
     }
 }

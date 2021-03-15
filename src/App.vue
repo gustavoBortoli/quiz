@@ -1,23 +1,22 @@
 <template>
   <v-app>
     <v-main>
-      <HelloWorld/>
+      <Index/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Index from '@/components/Index.vue'
 
 export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
+    name: 'App',
+    components: {
+        Index
+    },
+    created() {
+        this.$store.dispatch('getUsers')
+        this.$store.dispatch('getQuestions')
+    }
 };
 </script>
